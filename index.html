@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>To-do List ☑️</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <main>
+            <div class="nav">
+                <h1>TO-DO LIST</h1>
+                <ul class="nav-filter">
+                    <li id="task-filter">Tasks</li>
+                    <li id="important-filter">Important</li>
+                    <li id="completed-filter">Completed</li>
+                    <li id="new-list">Custom list +</li>
+                </ul>
+                <ul id="customlist"></ul>
+            </div>
+            <div class="principal">
+                <div class="searchbar">
+                    <input type="text" id="searchbar-input">
+                </div>
+                <h2 id="filter-title">Tasks</h2>
+                <ul id="tasks">
+                </ul>
+                <div class="add-btn">
+                    <span>+</span>
+                </div>
+            </div>
+        </main>
+        <div class="modal-container hidden">
+            <div class="modal new hidden">
+                <span class="close-x">✖️</span>
+                <h1>New task</h1>
+                <form>
+                    <span class="error"></span>
+                    <label for="title">Title*:</label>
+                    <input type="text" id="title">
+                    <span class="error"></span>
+                    <label>Description*:</label>
+                    <textarea id="description"></textarea>
+                    <label class="checkbox"><input type="checkbox" id="check-completed">Completed</label>
+                    <label class="checkbox"><input type="checkbox" id="check-important">Important</label>
+                    <label>Custom list:</label>
+                    <select id="select-list">
+                        <option value="false">None</option>
+                    </select>
+                    <label>Task color:</label>
+                    <select id="color">
+                        <option value="false">None</option>
+                        <option value="purple">Purple</option>
+                        <option value="green">Green</option>
+                        <option value="yellow">Yellow</option>
+                        <option value="orange">Orange</option>
+                        <option value="grey">Grey</option>
+                        <option value="pink">Pink</option>
+                        <option value="blue">Blue</option>
+                    </select>
+                </form>
+                <button id="cancel">Cancel</button>
+                <button id="create-event">Accept</button>
+            </div>
+            <div class="list hidden">
+                <span class="close-x">✖️</span>
+                <h1>New custom list</h1>
+                <span class="error" id="errorlist"></span>
+                <label for="newlist-name">List name:</label>
+                <input type="text" id="newlist-name">
+                <button id="cancel-list">Cancel</button>
+                <button id="create-list">Accept</button>
+            </div>
+            <div class="task-details hidden">
+                <span class="close-x">✖️</span>
+                <div id="task-details-color"><h1></h1></div>
+                <h2>Description: </h2>
+                <p></p>
+                <h2>Completed: </h2>
+                <p></p>
+                <h2>Important: </h2>
+                <p></p>
+                <button id="delete-task">Delete</button>
+            </div>
+            <div class="confirmation-delete hidden">
+                <h1>This custom list have tasks.</h1>
+                <p>Do you really want to delete it?</p>
+                <button id="cancel-delete">Cancel</button>
+                <button id="confirm-delete">Confirm</button>
+            </div>
+        </div>
+    </body>
+    <script src="app.js"></script>
+</html>

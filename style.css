@@ -1,0 +1,435 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.hidden {
+    display: none;
+}
+
+body {
+    background: linear-gradient(200deg, rgba(6,156,140,1) 44%, rgba(4,149,179,1) 100%);
+    font-family: 'Poppins', sans-serif;
+    height: 100%;
+}
+
+main {
+    display: flex;
+    background-color: #ffffff;
+    width: 80%;
+    margin: 6% auto 5.5% auto;
+    border-radius: 5px;
+    height: 650px;
+}
+/******************************************* SIDE MENU STYLE START *****************************************/
+.nav {
+    background-color: rgb(233, 233, 233);
+    width: 22%;
+    text-align: center;
+    border-radius: 5px;
+    color: rgb(10, 151, 137);
+    font-weight: bold;
+}
+
+.nav-filter {
+    border-bottom: 3px solid rgb(196, 194, 194);
+}
+
+.nav h1 {
+    margin: 20px 0;
+    text-decoration: underline overline dotted rgb(13, 114, 82);
+}
+
+.nav-filter li {
+    background-color: #ffffff;
+    width: 80%;
+    padding: 6px 0;
+    margin: 0 auto 18px auto;
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+.nav-filter li:hover {
+    background-color: rgb(10, 151, 137);
+    transition: 400ms ease-in-out;
+    color: azure;
+}
+
+.active {
+    position: relative;
+    background-color: rgb(10, 151, 137) !important;
+    color: white;
+
+}
+
+.active:after {
+    position: absolute;
+    content: "\276F";
+    right: 5px;
+    animation: active 1s infinite;
+}
+
+#customlist li {
+    color: gray;
+    cursor: pointer;
+    padding: 5px 0;
+}
+
+#customlist li:hover {
+    background-color: azure;
+    transition: 350ms ease-in-out;
+}
+
+#customlist li::before{
+    content: "+ ";
+}
+
+.active-list {
+    position: relative;
+    background-color: aliceblue !important;
+    color: white;
+
+}
+
+.active-list:after {
+    position: absolute;
+    content: "\276F";
+    right: 5px;
+    animation: active 1s infinite;
+}
+
+@keyframes active {
+    0% {right: 5px;}
+    50% {right: 9px;}
+    100% {right: 5px;}
+}
+
+.exclude-list {
+    cursor: pointer;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-color: transparent;
+    border: none;
+    outline:none;
+    margin-left: 10px;
+    font-size: 15px;
+}
+
+.exclude-list:hover {
+    font-size: 20px;
+    transition: 200ms ease-in-out;
+}
+
+/******************************************* SIDE MENU STYLE END *****************************************/
+
+
+/******************************************* PRINCIPAL TASKS SECTION STYLE START **************************/
+
+.principal {
+    position: relative;
+    display: flex;
+    flex-flow: column;
+    width: 78%;
+}
+
+.principal h2 {
+    text-align: center;
+    padding: 13px 0;
+    font-size: 30px;
+}
+
+.principal ul {
+    overflow: auto;
+}
+
+.principal li {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    width: 90%;
+    margin: 0 auto;
+    
+    padding: 5px 8px;
+    border-radius: 5px;
+}
+
+.principal li input {
+    -webkit-appearance: none;
+	background-color: #fafafa;
+	border: 1px solid #cacece;
+	box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px -15px 10px -12px rgba(0,0,0,0.05);
+	padding: 9px;
+	border-radius: 3px;
+	display: inline-block;
+    position: relative;
+    width: 25px;
+    outline: none;
+    cursor: pointer;
+}
+
+.principal li input:active, .principal li input:checked:active {
+	box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px 1px 3px rgba(0,0,0,0.1);
+}
+
+.principal li input:checked {
+	background-color: #e9ecee;
+	border: 1px solid #adb8c0;
+	box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px -15px 10px -12px rgba(0,0,0,0.05), inset 15px 10px -12px rgba(255,255,255,0.1);
+	color: #99a1a7;
+}
+
+.principal li input:checked:after {
+	content: '✖️';
+	font-size: 30px;
+	position: absolute;
+	top: -7px;
+	left: -3px;
+	color: black
+}
+
+.principal p {
+    width: 70%;
+    cursor: pointer;
+}
+
+.principal li:hover {
+    transform: scale(1.025);
+    transition: 200ms ease-in-out;
+}
+
+.searchbar {
+    width: 100%;
+    padding: 28px 0;
+    text-align: center;
+    border-bottom: 2px solid rgb(196, 194, 194);
+}
+
+.searchbar input {
+    height: 28px;
+    width: 60%;
+    border-radius: 12px;
+    font-size: 25px;
+    outline: none;
+    padding: 0 38px;
+    background: url(https://www.shareicon.net/data/256x256/2016/01/09/700554_magnifying-glass_512x512.png) no-repeat scroll 9px 3px;
+    background-size: 23px;
+}
+
+.add-btn {
+    position: absolute;
+    right: 15px;
+    bottom: 15px;
+    padding: 0px 15px;
+    background-color: rgba(10, 151, 137, 0.918);
+    border-radius: 100%;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+}
+
+.add-btn:hover {
+    background-color: rgba(10, 151, 137, 1);
+    border: 4px solid rgba(135, 230, 218, 0.918);
+    transition: 200ms ease-in-out;
+}
+
+.removing-task {
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+/******************************************* PRINCIPAL TASKS SECTION STYLE END ***************************/
+
+/******************************************* MODALS STYLE START ******************************************/
+
+.modal-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(54, 54, 54, 0.507);
+}
+
+.modal {
+    position: relative;
+    background-color: #ffffff;
+    margin: 10% auto 0 auto;
+    width: 45%;
+    height: 58%;
+    text-align: center;
+    padding: 25px 0;
+    border-radius: 5px;
+    box-shadow: gray 10px 10px 10px 2px;
+}
+
+.close-x {
+    position: absolute;
+    right: 10px;
+    top: 0px;
+    cursor: pointer;
+    font-size: 30px;
+}
+
+.modal h1 {
+    margin-bottom: 25px;
+}
+
+form {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    margin: 0 120px;
+}
+
+form input[type="text"], textarea, select {
+    width: 250px;
+}
+
+form select {
+    height: 25px;
+    font-size: 15px;
+}
+
+.modal input, .modal label, .modal textarea {
+    margin-bottom: 25px;
+}
+
+.modal textarea {
+    height: 80px;
+    resize: none;
+}
+
+.checkbox {
+    flex-basis: 50%;
+}
+
+.checkbox input {
+    margin-right: 10px;
+}
+
+.modal button, .list button, .task-details button, .confirmation-delete button {
+    padding: 10px 30px;
+    cursor: pointer;
+}
+
+.modal button:hover, .list button:hover, .task-details button:hover, .confirmation-delete button:hover {
+    box-shadow:gainsboro 0px 0px 2px 1px;
+    background-color: rgba(176, 217, 228, 0.301);
+    transition: 200ms ease-out;
+}
+
+.list {
+    position: relative;
+    background-color: #ffffff;
+    margin: 10% auto 0 auto;
+    width: 30%;
+    height: 28%;
+    text-align: center;
+    padding: 50px 60px;
+    border-radius: 5px;
+    box-shadow: gray 10px 10px 10px 2px;
+}
+
+.list input {
+    width: 60%;
+    height: 25px;
+    margin: 0px 0px 50px 10px;
+    font-size: 18px;
+}
+
+.list h1 {
+    margin-bottom: 50px;
+}
+
+.task-details {
+    position: relative;
+    background-color: #ffffff;
+    margin: 10% auto 0 auto;
+    width: 30%;
+    height: 40%;
+    text-align: center;
+    padding: 50px 60px;
+    border-radius: 5px;
+    box-shadow: gray 10px 10px 10px 2px;
+}
+
+#task-details-color {
+    display: inline-block;
+    height: 10px;
+    padding: 1px;
+}
+
+.task-details h2 {
+    margin-top: 15px;
+}
+
+.task-details p {
+    margin: 0px 0 15px 0;
+}
+
+.confirmation-delete {
+    position: relative;
+    background-color: #ffffff;
+    margin: 15% auto 0 auto;
+    width: 33%;
+    height: 20%;
+    text-align: center;
+    padding: 50px 60px;
+    border-radius: 5px;
+    box-shadow: gray 10px 10px 10px 2px;
+}
+
+.confirmation-delete h1 {
+    margin-bottom: 20px;
+}
+
+.confirmation-delete p {
+    margin-bottom: 35px;
+    font-size: 20px;
+}
+
+.error {
+    display: block;
+    flex-basis: 100%;
+    font-size: 12px;
+    color: red;
+    text-align: right;
+}
+
+/******************************************* MODALS STYLE END ******************************************/
+
+/******************************************* FOR "TASKS COLORS" START *********************************/
+
+.purple {
+    background-color: rgb(164, 106, 219);
+}
+
+.green {
+    background-color: aquamarine;
+}
+
+.blue {
+    background-color: rgb(62, 146, 243);
+}
+
+.yellow {
+    background-color: rgb(245, 245, 146);
+}
+
+.orange {
+    background-color: rgb(252, 195, 89)
+}
+
+.grey {
+    background-color: rgb(187, 186, 186);
+}
+
+.pink {
+    background-color: rgb(253, 146, 164);
+}
+
+/******************************************* CLASSES FOR TASKS COLORS START ****************************/
