@@ -10,12 +10,16 @@ var tasksStorage = localStorage.getItem("tasks");
 if (tasksStorage != null) {
     var json = JSON.parse(tasksStorage);
     tasklistUpdate(filter);
+} else {
+  localStorage.setItem("tasks", JSON.stringify(json));
 }
 var jsonLists = [];
 var listsStorage = localStorage.getItem("lists");
 if (listsStorage != null) {
     var jsonLists = JSON.parse(listsStorage);
     listsUpdate();
+} else {
+  localStorage.setItem("lists", JSON.stringify(jsonLists));
 }
 
 // SHOWING OR EXITING MODAL FOR ADD A TASK OR CUSTOM LIST
